@@ -32,10 +32,10 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-
 " Base16 Colours
-    colorscheme base16-monokai
-    set background=dark
+colorscheme base16-monokai
+set background=dark
+
 if &t_Co < 256
     set nocursorline " looks bad in this mode
 endif
@@ -46,6 +46,16 @@ let g:airline_powerline_fonts=1
 set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " All plugins must be added before the following line
 " call vundle#end()            " required

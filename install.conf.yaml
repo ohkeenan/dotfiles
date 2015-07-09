@@ -2,10 +2,10 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.vim: .vim/
-    ~/.vimrc: .vimrc
-    ~/.zshrc: .zshrc
-    ~/.bashrc: .bashrc
+    ~/.vim: vim/
+    ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.bashrc: bashrc
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

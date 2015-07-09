@@ -25,15 +25,14 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 call pathogen#helptags()
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
 
 " Base16 Colours
 if &t_Co < 256
-    colorscheme default
+    colorscheme base16-monokai
+    set background=dark
     set nocursorline " looks bad in this mode
 else
-    colorscheme base16-default
+    colorscheme base16-monokai
     set background=dark
 endif
 

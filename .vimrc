@@ -1,4 +1,3 @@
-colorscheme monokai
 
 syntax on
 set nocompatible              " be iMproved, required
@@ -21,10 +20,13 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'bling/vim-airline'
+
+" Base16 Colours
+colorscheme base16-default
+set background=dark
 
 " Airline hax
 set laststatus=2
@@ -33,9 +35,10 @@ set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+" All plugins must be added before the following line
+" call vundle#end()            " required
 filetype plugin indent on    " required
+
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "

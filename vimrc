@@ -13,6 +13,13 @@ set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+
+set ignorecase
+set smartcase
+
 " Highlight current line in active window
 augroup CursorLineOnlyInActiveWindow
     autocmd!

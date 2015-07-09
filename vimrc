@@ -27,13 +27,10 @@ call pathogen#helptags()
 
 
 " Base16 Colours
+    colorscheme base16-monokai
+    set background=dark
 if &t_Co < 256
-    colorscheme base16-monokai
-    set background=dark
     set nocursorline " looks bad in this mode
-else
-    colorscheme base16-monokai
-    set background=dark
 endif
 
 " Airline hax

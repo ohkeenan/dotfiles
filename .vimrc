@@ -1,32 +1,41 @@
+set nocompatible              " be iMproved (required because it'll break vi)
 
 syntax on
-set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set number                      "Line numbers are good
 set backspace=indent,eol,start  "Allow backspace in insert mode
 set history=1000                "Store lots of :cmdline history
 set showcmd                     "Show incomplete cmds down the bottom
+set showmatch
 set showmode                    "Show current mode down the bottom
 set gcr=a:blinkon0              "Disable cursor blink
 set visualbell                  "No sounds
 set autoread                    "Reload files changed outside vim
 
+" Highlight current line in active window
+augroup CursorLineOnlyInActiveWindow
+    autocmd!
+    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    autocmd WinLeave * setlocal nocursorline
+augroup END
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
+" Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
 
-" let Vundle manage Vundle, required
-" Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 
 " Base16 Colours
-colorscheme base16-default
-set background=dark
+if &t_Co < 256
+    colorscheme default
+    set nocursorline " looks bad in this mode
+else
+    colorscheme base16-default
+    set background=dark
+endif
 
 " Airline hax
 set laststatus=2

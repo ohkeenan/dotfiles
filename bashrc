@@ -30,7 +30,7 @@ shopt -s checkwinsize
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    urxvt) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -91,8 +91,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -102,16 +102,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# enable powerline
-if [ -f /usr/lib/python3.4/site-packages/powerline/bindings/bash/powerline.sh ]; then
-    source /usr/lib/python3.4/site-packages/powerline/bindings/bash/powerline.sh
-fi
 
 # export default editor
 export EDITOR="vim"
 
-# The next line updates PATH for the Google Cloud SDK.
-source '/home/kverbr/google-cloud-sdk/path.bash.inc'
-
-# The next line enables bash completion for gcloud.
-source '/home/kverbr/google-cloud-sdk/completion.bash.inc'

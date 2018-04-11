@@ -14,3 +14,9 @@
 [submodule "vim/bundle/syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "inc/awesome-vim-colorschemes"]
+	path = inc/awesome-vim-colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes.git
+[submodule "inc/antigen"]
+	path = inc/antigen
+	url = https://github.com/zsh-users/antigen.git

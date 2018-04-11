@@ -1,5 +1,4 @@
-source /usr/share/zsh/plugins/antigen/antigen.zsh
-source /usr/share/nvm/init-nvm.sh
+source /home/$USER/.dotfiles/inc/antigen/antigen.zsh
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.history
@@ -19,6 +18,7 @@ bindkey "[5D" backward-word        #control right
 
 antigen use oh-my-zsh
 
+#antigen theme candy
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen bundle git

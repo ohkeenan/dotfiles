@@ -27,10 +27,14 @@ augroup CursorLineOnlyInActiveWindow
     autocmd WinLeave * setlocal nocursorline
 augroup END
 
-" Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-call pathogen#helptags()
+call plug#begin()
+Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
 
 " Base16 Colours
 colorscheme abstract
@@ -45,7 +49,7 @@ set laststatus=2
 let g:airline_powerline_fonts=1
 set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='dark'
 
 " Syntastic
 set statusline+=%#warningmsg#

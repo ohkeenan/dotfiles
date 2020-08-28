@@ -33,7 +33,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 " Base16 Colours
-colorscheme base16-monokai
+colorscheme abstract
 set background=dark
 
 if &t_Co < 256

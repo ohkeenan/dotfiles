@@ -20,3 +20,6 @@
 [submodule "inc/antigen"]
 	path = inc/antigen
 	url = https://github.com/zsh-users/antigen.git
+[submodule "vim/awesome-vim-colorschemes"]
+	path = vim/awesome-vim-colorschemes
+	url = https://github.com/rafi/awesome-vim-colorschemes.git
